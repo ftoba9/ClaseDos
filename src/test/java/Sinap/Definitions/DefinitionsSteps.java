@@ -15,7 +15,7 @@ public class DefinitionsSteps {
 	// Se instancia la clase de la que se van a utilizar los métodos.
 	private AmazonRegistroPagina amazonRegistroPagina = new AmazonRegistroPagina (driver);
 
-	@Given("^abrir el navegador en página de registro de Amazon$")
+	@Given("^abrir el navegador en la página de registro de Amazon$")
 	public void abrir_navegador() {
 		this.conexion = new Conexion();
 		this.driver = this.conexion.abrirNavegador();
@@ -27,7 +27,7 @@ public class DefinitionsSteps {
 		this.amazonRegistroPagina.registroAmazon();
 	}
 	
-	@Then("^diligenciar campo nombre$")
+	@Then("^diligenciar campo nombre (.*)$")
 	public void diligenciarNombre(String nombre) {
 		this.amazonRegistroPagina = new AmazonRegistroPagina (driver);
 		this.amazonRegistroPagina.diligenciarFormulario(nombre);

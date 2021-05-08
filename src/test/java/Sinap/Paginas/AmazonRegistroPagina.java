@@ -28,9 +28,9 @@ public class AmazonRegistroPagina {
 	// El step es para identificar los paso que va a hacer.
 	@Step
 	public void registroAmazon() {
-		txtNombre.sendKeys();
+		btnCrear.click();
 	}
-
+	
 	@Step
 	public void diligenciarFormulario(String nombre) {
 		txtNombre.sendKeys(nombre);
